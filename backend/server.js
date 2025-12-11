@@ -7,7 +7,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL || 'https://lead-gen-blond.vercel.app',
+    credentials: true
+}));
 app.use(express.json());
 
 // Twilio client

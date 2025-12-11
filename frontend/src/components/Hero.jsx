@@ -281,7 +281,7 @@ function Hero() {
     ]
 
     return (
-        <section className="bg-[#FDF3EB] min-h-full h-[95vh] overflow-auto lg:overflow-hidden">
+        <section className="bg-[#FDF3EB] min-h-full h-screen overflow-auto lg:overflow-hidden ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center py-8 lg:py-0">
                 {/* Title - Hidden on mobile */}
                 {/* <h2 className="hidden lg:block text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 text-center">
@@ -363,7 +363,7 @@ function Hero() {
                     </div> */}
 
                     {/* Request Callback Form - Full width on mobile, centered on desktop */}
-                    <div className="w-full lg:w-auto lg:max-w-md -mt-30 md:mt-1">
+                    <div className="w-full lg:w-auto lg:max-w-md mt-10">
                         {/* Heading outside the form */}
                         <h3 className="text-3xl lg:text-2xl font-bold text-black mb-4">
                             India's Fastest Doorstep <br /> <span className='text-[#5C46C2]'> Smartphone Repair Service</span>
