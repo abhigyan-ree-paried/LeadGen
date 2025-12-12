@@ -282,13 +282,13 @@ function Hero() {
 
     return (
         <section className="bg-[#FDF3EB] min-h-screen overflow-x-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12">
+            <div className="max-w-7xl mx-auto flex flex-col justify-center py-6 sm:py-8 lg:py-12">
                 {/* Title - Hidden on mobile */}
                 {/* <h2 className="hidden lg:block text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 text-center">
                     Price Comparison Chart
                 </h2> */}
 
-                <div className="grid lg:flex lg:justify-center lg:gap-6 items-start">
+                <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-6 items-stretch">
                     {/* Price Comparison Table - Hidden on mobile, visible on desktop */}
                     {/* <div className="hidden lg:block lg:col-span-2">
                         <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] overflow-hidden">
@@ -363,13 +363,12 @@ function Hero() {
                     </div> */}
 
                     {/* Request Callback Form - Full width on mobile, centered on desktop */}
-                    <div className="w-full sm:max-w-md mx-auto mt-6 sm:mt-8 lg:mt-10">
-                        {/* Heading outside the form */}
-                        <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
-                            India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Services</span>
-                        </h3>
-
-                        <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 lg:mt-10">
+                    <div className="w-full px-4 sm:px-6 lg:px-8 sm:max-w-md sm:mx-auto mt-6 sm:mt-8 lg:mt-10">
+                        <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] p-5 sm:p-6 lg:p-8">
+                            {/* Heading inside the form */}
+                            <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
+                                India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Services</span>
+                            </h3>
                             <div className="mb-6">
                                 <p className="text-[#666666] text-lg font-semibold">Request a Call Back</p>
                             </div>
@@ -394,7 +393,7 @@ function Hero() {
                                         value={formData.mobile}
                                         onChange={handleChange}
                                         placeholder="Enter Mobile Number"
-                                        className="flex-1 px-3 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
+                                        className="flex-1 px-2 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
                                         required
                                     />
                                 </div>
@@ -407,7 +406,7 @@ function Hero() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         placeholder="Enter Email Address"
-                                        className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
+                                        className="w-full px-2 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
                                         required
                                     />
                                 </div>
@@ -534,15 +533,15 @@ function Hero() {
                     </div>
 
                     {/* Our Services Section - Mobile only */}
-                    <div className="lg:hidden mt-8 sm:mt-10 w-full">
+                    <div className="lg:hidden mt-8 sm:mt-10 w-full px-4 sm:px-6 lg:px-8">
                         <h3 className="text-xl sm:text-2xl font-bold text-[#6B7280] text-center mb-4 sm:mb-6">Our Services</h3>
-                        <div className="grid grid-cols-5 gap-1 sm:gap-2">
+                        <div className="grid grid-cols-5 gap-1.5 sm:gap-3">
                             {services.map((service, index) => {
                                 const IconComponent = service.icon
                                 return (
-                                    <div key={index} className="bg-[#FFF4E6] rounded-md sm:rounded-xl p-1 sm:p-3 flex flex-col items-center justify-center hover:shadow-md transition-shadow border border-[#FF8A00]">
-                                        <IconComponent className="text-[#FF8A00] text-xl sm:text-3xl mb-0.5 sm:mb-1.5" />
-                                        <p className="text-[7px] sm:text-[10px] font-medium text-[#6B7280] text-center leading-tight">{service.name}</p>
+                                    <div key={index} className="bg-[#FFF4E6] rounded-md sm:rounded-xl p-1.5 sm:p-3 flex flex-col items-center justify-center hover:shadow-md transition-shadow border border-[#FF8A00]">
+                                        <IconComponent className="text-[#FF8A00] text-lg sm:text-3xl mb-0.5 sm:mb-1.5" />
+                                        <p className="text-[8px] sm:text-[10px] font-medium text-[#6B7280] text-center leading-tight">{service.name}</p>
                                     </div>
                                 )
                             })}
