@@ -146,9 +146,9 @@ app.post('/api/verify-otp', (req, res) => {
     }
 });
 
-// Health check endpoint
+// Health check endpoint - minimal response for cron-job compatibility
 app.get('/health', (req, res) => {
-    res.json({ status: 'OK', message: 'Server is running' });
+    res.status(200).send('OK');
 });
 
 // Start server
