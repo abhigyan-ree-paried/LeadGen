@@ -35,6 +35,9 @@ function Hero() {
 
             // Show OTP modal
             setShowOtpModal(true)
+
+            // Setup WebOTP API for automatic OTP detection
+            setupWebOTP()
         } catch (err) {
             setError(err.message || 'Failed to send OTP. Please try again.')
             console.error('Error:', err)
@@ -63,6 +66,30 @@ function Hero() {
             if (value && index < 5) {
                 document.getElementById(`otp-${index + 1}`)?.focus()
             }
+        }
+    }
+
+    // WebOTP API for automatic OTP detection on mobile
+    const setupWebOTP = () => {
+        if ('OTPCredential' in window) {
+            const ac = new AbortController()
+
+            navigator.credentials.get({
+                otp: { transport: ['sms'] },
+                signal: ac.signal
+            }).then(otp => {
+                if (otp && otp.code) {
+                    // Auto-fill OTP
+                    const otpDigits = otp.code.split('')
+                    setOtp(otpDigits)
+                    console.log('OTP auto-filled:', otp.code)
+                }
+            }).catch(err => {
+                console.log('WebOTP error:', err)
+            })
+
+            // Cleanup
+            return () => ac.abort()
         }
     }
 
@@ -562,6 +589,8 @@ function Hero() {
                                         key={index}
                                         id={`otp-${index}`}
                                         type="text"
+                                        inputMode="numeric"
+                                        autoComplete={index === 0 ? 'one-time-code' : 'off'}
                                         maxLength="1"
                                         value={digit}
                                         onChange={(e) => handleOtpChange(index, e.target.value)}

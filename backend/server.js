@@ -69,9 +69,9 @@ app.post('/api/send-otp', async (req, res) => {
             expiresAt: Date.now() + 5 * 60 * 1000 // 5 minutes
         });
 
-        // Send SMS via Twilio
+        // Send SMS via Twilio with WebOTP format
         const message = await client.messages.create({
-            body: `Your Ree.Paired verification code is: ${otp}. Valid for 5 minutes.`,
+            body: `Your Ree.Paired verification code is: ${otp}. Valid for 5 minutes.\n\n@landing.reepaired.com #${otp}`,
             from: process.env.TWILIO_PHONE_NUMBER,
             to: phoneNumber
         });
