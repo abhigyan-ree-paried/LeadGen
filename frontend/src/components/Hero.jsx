@@ -282,7 +282,7 @@ function Hero() {
 
     return (
         <section className="bg-[#FDF3EB] min-h-screen overflow-x-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12">
+            <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12">
                 {/* Title - Hidden on mobile */}
                 {/* <h2 className="hidden lg:block text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 text-center">
                     Price Comparison Chart
@@ -363,7 +363,7 @@ function Hero() {
                     </div> */}
 
                     {/* Request Callback Form - Full width on mobile, centered on desktop */}
-                    <div className="w-full max-w-[95%] sm:max-w-md mx-auto mt-6 sm:mt-8 lg:mt-10">
+                    <div className="w-full sm:max-w-md mx-auto mt-6 sm:mt-8 lg:mt-10">
                         {/* Heading outside the form */}
                         <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
                             India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Services</span>
