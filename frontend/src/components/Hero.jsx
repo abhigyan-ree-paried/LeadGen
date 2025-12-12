@@ -281,8 +281,8 @@ function Hero() {
     ]
 
     return (
-        <section className="bg-[#FDF3EB] min-h-full h-screen overflow-auto lg:overflow-hidden ">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center py-8 lg:py-0">
+        <section className="bg-[#FDF3EB] min-h-screen">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12">
                 {/* Title - Hidden on mobile */}
                 {/* <h2 className="hidden lg:block text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 text-center">
                     Price Comparison Chart
@@ -363,13 +363,13 @@ function Hero() {
                     </div> */}
 
                     {/* Request Callback Form - Full width on mobile, centered on desktop */}
-                    <div className="w-full lg:w-auto lg:max-w-md mt-10">
+                    <div className="w-full max-w-md lg:max-w-md mt-6 sm:mt-8 lg:mt-10">
                         {/* Heading outside the form */}
-                        <h3 className="text-3xl lg:text-2xl font-bold text-black mb-4">
-                            India's Fastest Doorstep <br /> <span className='text-[#5C46C2]'> Smartphone Repair Service</span>
+                        <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
+                            India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Service</span>
                         </h3>
 
-                        <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] p-6 lg:p-8 mt-10">
+                        <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 lg:mt-10">
                             <div className="mb-6">
                                 <p className="text-[#666666] text-lg font-semibold">Request a Call Back</p>
                             </div>
@@ -381,7 +381,7 @@ function Hero() {
                                         name="countryCode"
                                         value={formData.countryCode}
                                         onChange={handleChange}
-                                        className="w-20 lg:w-24 px-2 lg:px-3 py-3 text-sm border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent bg-white font-medium"
+                                        className="w-24 px-2 sm:px-3 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent bg-white font-medium"
                                     >
                                         <option value="+91">+91</option>
                                         <option value="+97">+97</option>
@@ -394,7 +394,7 @@ function Hero() {
                                         value={formData.mobile}
                                         onChange={handleChange}
                                         placeholder="Enter Mobile Number"
-                                        className="flex-1 px-4 py-3 text-sm border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
+                                        className="flex-1 px-3 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
                                         required
                                     />
                                 </div>
@@ -407,7 +407,7 @@ function Hero() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         placeholder="Enter Email Address"
-                                        className="w-full px-4 py-3 text-sm border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
+                                        className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
                                         required
                                     />
                                 </div>
@@ -418,7 +418,7 @@ function Hero() {
                                         name="repair"
                                         value={formData.repair}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 text-sm border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white"
+                                        className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white"
                                         required
                                     >
                                         <option value="">Select Repair</option>
@@ -432,13 +432,13 @@ function Hero() {
                                 </div>
 
                                 {/* Brand and Model */}
-                                <div className="grid grid-cols-2 gap-3">
+                                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                                     <div className="relative">
                                         <select
                                             name="brand"
                                             value={formData.brand}
                                             onChange={handleChange}
-                                            className="w-full px-3 lg:px-4 py-3 text-sm border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white"
+                                            className="w-full px-2 sm:px-3 lg:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white"
                                             required
                                         >
                                             <option value="">Phone Brand</option>
@@ -456,7 +456,7 @@ function Hero() {
                                             name="model"
                                             value={formData.model}
                                             onChange={handleChange}
-                                            className="w-full px-3 lg:px-4 py-3 text-sm border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
+                                            className="w-full px-2 sm:px-3 lg:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
                                             required
                                             disabled={!formData.brand}
                                         >
@@ -482,7 +482,7 @@ function Hero() {
                                 <button
                                     type="submit"
                                     disabled={isLoading}
-                                    className="w-full bg-[#FB833A] hover:bg-[#E67A00] text-white font-bold py-4 rounded-3xl transition-all duration-200 text-base shadow-md hover:shadow-lg mt-6 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full bg-[#FB833A] hover:bg-[#E67A00] text-white font-bold py-3 sm:py-4 rounded-3xl transition-all duration-200 text-sm sm:text-base shadow-md hover:shadow-lg mt-6 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     <span className="relative z-10">
                                         {isLoading ? 'Sending OTP...' : 'Request a Callback'}
@@ -533,15 +533,15 @@ function Hero() {
                         </div>
 
                         {/* Our Services Section - Mobile only */}
-                        <div className="lg:hidden mt-15">
-                            <h3 className="text-2xl font-bold text-[#6B7280] text-center mb-6">Our Services</h3>
+                        <div className="lg:hidden mt-8 sm:mt-10">
+                            <h3 className="text-xl sm:text-2xl font-bold text-[#6B7280] text-center mb-4 sm:mb-6">Our Services</h3>
                             <div className="grid grid-cols-5 gap-2 sm:gap-3">
                                 {services.map((service, index) => {
                                     const IconComponent = service.icon
                                     return (
-                                        <div key={index} className="bg-[#FFF4E6] rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 flex flex-col items-center justify-center hover:shadow-md transition-shadow border border-[#FF8A00]">
-                                            <IconComponent className="text-[#FF8A00] text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2" />
-                                            <p className="text-[8px] sm:text-[9px] md:text-[10px] font-medium text-[#6B7280] text-center leading-tight">{service.name}</p>
+                                        <div key={index} className="bg-[#FFF4E6] rounded-lg sm:rounded-xl p-2 sm:p-3 flex flex-col items-center justify-center hover:shadow-md transition-shadow border border-[#FF8A00]">
+                                            <IconComponent className="text-[#FF8A00] text-2xl sm:text-3xl mb-1 sm:mb-1.5" />
+                                            <p className="text-[8px] sm:text-[10px] font-medium text-[#6B7280] text-center leading-tight">{service.name}</p>
                                         </div>
                                     )
                                 })}
@@ -554,14 +554,14 @@ function Hero() {
             {/* OTP Modal */}
             {showOtpModal && (
                 <div className="fixed inset-0 bg-opacity-40 flex items-center justify-center z-50 p-4 backdrop-blur-[13px]">
-                    <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+                    <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 max-w-md w-full">
                         <div className="text-center mb-6">
-                            <div className="w-16 h-16 bg-[#FF8A00] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-8 h-8 text-[#FF8A00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#FF8A00] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg className="w-7 h-7 sm:w-8 sm:h-8 text-[#FF8A00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">Enter OTP</h3>
+                            <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A1A] mb-2">Enter OTP</h3>
                             <p className="text-[#666666] text-sm">
                                 We've sent a verification code to<br />
                                 <span className="font-semibold text-[#1A1A1A]">{formData.countryCode} {formData.mobile}</span>
@@ -569,7 +569,7 @@ function Hero() {
                         </div>
 
                         <form onSubmit={handleOtpSubmit}>
-                            <div className="flex gap-2 justify-center mb-6">
+                            <div className="flex gap-1.5 sm:gap-2 justify-center mb-6">
                                 {otp.map((digit, index) => (
                                     <input
                                         key={index}
@@ -578,7 +578,7 @@ function Hero() {
                                         maxLength="1"
                                         value={digit}
                                         onChange={(e) => handleOtpChange(index, e.target.value)}
-                                        className="w-12 h-12 text-center text-xl font-bold border-2 border-[#E5E5E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 text-center text-lg sm:text-xl font-bold border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
                                         required
                                     />
                                 ))}
@@ -636,16 +636,16 @@ function Hero() {
             {/* Thank You Modal */}
             {showThankYouModal && (
                 <div className="fixed inset-0 bg-opacity-40 flex items-center justify-center z-50 p-4 backdrop-blur-[13px]">
-                    <div className="bg-white rounded-2xl shadow-2xl p-10 max-w-sm w-full text-center">
+                    <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-10 max-w-sm w-full text-center">
                         {/* Success Icon */}
-                        <div className="w-20 h-20 bg-[#FF8A00] rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#FF8A00] rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                             </svg>
                         </div>
 
                         {/* Thank You Message */}
-                        <h3 className="text-3xl font-bold text-[#1A1A1A] mb-3">Thank You!</h3>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-3">Thank You!</h3>
                         <p className="text-[#666666] text-base mb-4">
                             Your request has been submitted successfully.<br />
                             We'll call you back soon.

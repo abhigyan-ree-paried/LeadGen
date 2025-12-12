@@ -7,18 +7,18 @@ function Navbar() {
     return (
         <nav className="bg-[#FDF3EB] border-b border-[#E5E5E5]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16 lg:h-28">
+                <div className="flex justify-between items-center h-14 sm:h-16 lg:h-28">
                     {/* Logo */}
                     <div className="flex items-center">
                         <img
                             src={logo}
                             alt="Ree.Paired Logo"
-                            className="h-6 lg:h-8 w-auto"
+                            className="h-7 sm:h-8 lg:h-10 w-auto"
                         />
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden hidden">
+                    <div className="md:hidden">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="text-[#1A1A1A] hover:text-[#FF8A00] p-2"
@@ -67,7 +67,7 @@ function Navbar() {
 
                 {/* Mobile Menu */}
                 {isMenuOpen && (
-                    <div className="md:hidden py-4 border-t border-[#E5E5E5]">
+                    <div className="md:hidden py-6 border-t border-[#E5E5E5]">
                         <div className="flex flex-col space-y-4">
                             <button className="text-[#1A1A1A] hover:text-[#FF8A00] font-medium text-base transition-colors flex items-center justify-between">
                                 All Pages
