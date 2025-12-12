@@ -282,7 +282,7 @@ function Hero() {
 
     return (
         <section className="bg-[#FDF3EB] min-h-screen overflow-x-hidden">
-            <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12 mr-4">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12">
                 {/* Title - Hidden on mobile */}
                 {/* <h2 className="hidden lg:block text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 text-center">
                     Price Comparison Chart
