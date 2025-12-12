@@ -281,14 +281,14 @@ function Hero() {
     ]
 
     return (
-        <section className="bg-[#FDF3EB] min-h-screen">
+        <section className="bg-[#FDF3EB] min-h-screen overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center py-6 sm:py-8 lg:py-12">
                 {/* Title - Hidden on mobile */}
                 {/* <h2 className="hidden lg:block text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 text-center">
                     Price Comparison Chart
                 </h2> */}
 
-                <div className="grid lg:flex lg:justify-center gap-6 items-start">
+                <div className="grid lg:flex lg:justify-center lg:gap-6 items-start">
                     {/* Price Comparison Table - Hidden on mobile, visible on desktop */}
                     {/* <div className="hidden lg:block lg:col-span-2">
                         <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] overflow-hidden">
@@ -366,7 +366,7 @@ function Hero() {
                     <div className="w-full max-w-md lg:max-w-md mt-6 sm:mt-8 lg:mt-10">
                         {/* Heading outside the form */}
                         <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
-                            India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Service</span>
+                            India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Services</span>
                         </h3>
 
                         <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 lg:mt-10">
