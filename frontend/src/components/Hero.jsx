@@ -398,18 +398,6 @@ function Hero() {
                                     />
                                 </div>
 
-                                {/* Email Address */}
-                                <div>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        placeholder="Enter Email Address"
-                                        className="w-full px-2 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent"
-                                        required
-                                    />
-                                </div>
 
                                 {/* Select Repair */}
                                 <div className="relative">
