@@ -363,7 +363,7 @@ function Hero() {
                     </div> */}
 
                     {/* Request Callback Form - Full width on mobile, centered on desktop */}
-                    <div className="w-full max-w-md lg:max-w-md mt-6 sm:mt-8 lg:mt-10">
+                    <div className="w-full max-w-[95%] sm:max-w-md mx-auto mt-6 sm:mt-8 lg:mt-10">
                         {/* Heading outside the form */}
                         <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
                             India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Services</span>
@@ -533,13 +533,13 @@ function Hero() {
                         </div>
 
                         {/* Our Services Section - Mobile only */}
-                        <div className="lg:hidden mt-8 sm:mt-10 -mx-4 sm:mx-0 px-4 sm:px-0">
+                        <div className="lg:hidden mt-8 sm:mt-10 w-full">
                             <h3 className="text-xl sm:text-2xl font-bold text-[#6B7280] text-center mb-4 sm:mb-6">Our Services</h3>
-                            <div className="grid grid-cols-5 gap-1.5 sm:gap-3">
+                            <div className="grid grid-cols-5 gap-1 sm:gap-2">
                                 {services.map((service, index) => {
                                     const IconComponent = service.icon
                                     return (
-                                        <div key={index} className="bg-[#FFF4E6] rounded-md sm:rounded-xl p-1.5 sm:p-3 flex flex-col items-center justify-center hover:shadow-md transition-shadow border border-[#FF8A00]">
+                                        <div key={index} className="bg-[#FFF4E6] rounded-md sm:rounded-xl p-1 sm:p-3 flex flex-col items-center justify-center hover:shadow-md transition-shadow border border-[#FF8A00]">
                                             <IconComponent className="text-[#FF8A00] text-xl sm:text-3xl mb-0.5 sm:mb-1.5" />
                                             <p className="text-[7px] sm:text-[10px] font-medium text-[#6B7280] text-center leading-tight">{service.name}</p>
                                         </div>
