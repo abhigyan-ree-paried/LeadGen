@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 const allowedOrigins = [
+    'https://landing.reepaired.com',
     'https://lead-gen-blond.vercel.app',
     'http://localhost:5173',
     'http://localhost:3000'
@@ -15,7 +16,18 @@ const allowedOrigins = [
 
 app.use(cors({
     origin: function (origin, callback) {
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) {
+            return callback(null, true);
+        }
+
+        // Allow all Render.com domains (for frontend deployed on Render)
+        if (origin.includes('.onrender.com')) {
+            return callback(null, true);
+        }
+
+        // Check if origin is in allowed list
+        if (allowedOrigins.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
