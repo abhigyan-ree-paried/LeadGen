@@ -16,7 +16,7 @@ export const saveToSheet = async (formData, otpStatus = 'Pending', rowId = null)
                     timeStyle: 'short'
                 }),
                 phone: "'" + formData.countryCode + formData.mobile, // Add apostrophe to force text format
-                repair: formData.repair,
+                service: formData.service,
                 brand: formData.brand,
                 model: formData.model,
                 otpVerified: otpStatus,

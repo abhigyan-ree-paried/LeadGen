@@ -7,7 +7,7 @@ function Hero() {
     const [formData, setFormData] = useState({
         countryCode: '+91',
         mobile: '',
-        repair: '',
+        service: '',
         brand: '',
         model: ''
     })
@@ -133,15 +133,12 @@ function Hero() {
         }
     }
 
-    const repairTypes = [
-        'Screen Replacement',
-        'Battery Replacement',
-        'Water Damage',
+    const serviceTypes = [
+        'Screen',
+        'Battery',
         'Charging Port',
-        'Camera Issue',
-        'Software Issue',
-        'Speaker/Microphone',
-        'Dead phone',
+        'Camera',
+        'Speaker',
         'Other'
     ]
 
@@ -300,11 +297,11 @@ function Hero() {
     }
 
     const services = [
-        { name: 'Screen Repair', icon: MdPhoneAndroid },
-        { name: 'Battery Replace', icon: MdBatteryChargingFull },
-        { name: 'Water Damage', icon: MdWaterDrop },
-        { name: 'Camera Repair', icon: MdCameraAlt },
-        { name: 'Charging Port', icon: MdPowerInput }
+        { name: 'Broken Screen', icon: MdPhoneAndroid },
+        { name: 'Battery Problem', icon: MdBatteryChargingFull },
+        { name: 'Back Panel', icon: MdWaterDrop },
+        { name: 'Camera', icon: MdCameraAlt },
+        { name: 'Charging', icon: MdPowerInput }
     ]
 
     return (
@@ -394,7 +391,7 @@ function Hero() {
                         <div className="bg-white rounded-2xl shadow-md border border-[#E5E5E5] p-5 sm:p-6 lg:p-8">
                             {/* Heading inside the form */}
                             <h3 className="text-2xl sm:text-3xl lg:text-2xl font-bold text-black mb-4 leading-tight">
-                                India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Repair Services</span>
+                                India's Fastest Doorstep <br className="sm:hidden" /> <span className='text-[#5C46C2]'>Smartphone Services</span>
                             </h3>
                             <div className="mb-6">
                                 <p className="text-[#666666] text-lg font-semibold">Request a Call Back</p>
@@ -426,18 +423,18 @@ function Hero() {
                                 </div>
 
 
-                                {/* Select Repair */}
+                                {/* Select Service */}
                                 <div className="relative">
                                     <select
-                                        name="repair"
-                                        value={formData.repair}
+                                        name="service"
+                                        value={formData.service}
                                         onChange={handleChange}
                                         className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border-2 border-[#E5E5E5] rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF8A00] focus:border-transparent appearance-none bg-white"
                                         required
                                     >
-                                        <option value="">Select Repair</option>
-                                        {repairTypes.map((repair, index) => (
-                                            <option key={index} value={repair}>{repair}</option>
+                                        <option value="">Select Service</option>
+                                        {serviceTypes.map((service, index) => (
+                                            <option key={index} value={service}>{service}</option>
                                         ))}
                                     </select>
                                     <svg className="w-4 h-4 text-[#999999] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">

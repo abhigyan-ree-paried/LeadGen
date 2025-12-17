@@ -18,7 +18,7 @@ function Navbar() {
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden">
+                    <div className="hidden">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="text-[#1A1A1A] hover:text-[#FF8A00] p-2"
